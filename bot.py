@@ -512,7 +512,7 @@ async def on_callback_query(client, callback: CallbackQuery):
     elif callback.data.startswith('options'):
         await options_click(client, callback)
     else:
-        await bot.answer_callback_query(callback.id, 'This is an old button, please redo the search', show_alert=True)
+        await bot.answer_callback_query(callback.id, 'This is an old button, please redo the search', show_alert=False)
         return
     try:
         await callback.answer()
